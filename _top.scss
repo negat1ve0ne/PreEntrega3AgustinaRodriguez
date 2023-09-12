@@ -1,0 +1,15 @@
+/* top */
+
+.top{
+    height: 40px;
+    width: 40px;
+    background-color: $color2;
+    color: $color3;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 28px;
+    box-shadow: 0 0 5px $color3;
+}

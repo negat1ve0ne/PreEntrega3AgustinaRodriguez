@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@400;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=REM:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+
+/* font-family: 'Lato', sans-serif;
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: $font2;
+font-family: 'PT Serif', serif;
+font-family: 'REM', sans-serif;
+font-family: 'Work Sans', sans-serif; */
+
+$color1: black;
+$color2: red;
+$color3: white;
+$font1: 'Work Sans', sans-serif;
+$font2: 'Open Sans', sans-serif;
+
+*{
+    box-sizing: border-box;
+}
+
+/* navbar */
+
+nav{
+    background: $color1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    padding: 25px 25px 25px 25px;
+}
+
+.navbar-brand img{
+    height: 60px;
+}
+
+nav .left-side a:hover{
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: $color3;
+    text-transform: none;
+}
+
+nav .right-side a{
+    color: $color2;
+    margin-left: 40px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav .right-side a:hover{
+    letter-spacing: 1px;
+    color: $color3;
+    text-transform: none;
+}
+
+label{
+    display: none;
+}
+
+body > input{
+    visibility: hidden;
+    position: absolute;
+}
+
+/* jumbotron */
+
+.jumbotron{
+    height: 600px;
+    width: 100%;
+    background-image: url(img/contact.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* contact */
+
+.contact{
+    background-color: $color1;
+    text-align: center;
+    padding: 100px 0px;
+}
+
+.contact h3{
+    font-size: 36px;
+    color: $color2;
+}
+
+/* footer */
+
+footer{
+    background-color: rgb(16, 16, 16);
+    color: $color3;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+}
+
+footer p{
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: $font2;
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer i{
+    color: $color2;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+/* top */
+
+.top{
+    height: 40px;
+    width: 40px;
+    background-color: $color2;
+    color: #fff;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 28px;
+    box-shadow: 0 0 5px #fff;
+}
+
+/* mediaqueries */
+
+form{
+    background: rgb(16, 16, 16);
+    width: 640px;
+    margin: 50px auto;
+    max-width: 97%;
+    border-radius: 4px;
+    padding: 55px 30px;
+}
+
+form .half{
+    display: flex;
+    justify-content: space-between;
+}
+
+form .half .item{
+    display: flex;
+    color: $color3;
+    flex-direction: column;
+    margin-bottom: 24px;
+    width: 48%;
+}
+
+form label{
+    display: block;
+    font-size: 13px;
+    letter-spacing: 3.5px;
+    margin-bottom: 16px;
+}
+
+form .half .item input{
+    border-radius: 4px;
+    border: 1px solid $color2;
+    outline: 0;
+    padding: 16px;
+    width: 100%;
+    height: 44px;
+    background: $color1;
+    font-size: 17px;
+}
+
+form .full{
+    margin-bottom: 24px;
+    color: $color3;
+}
+
+form .full textarea{
+    background: $color1;
+    border-radius: 4px;
+    border: 1px solid $color2;
+    outline: 0;
+    padding: 12px 16px;
+    width: 100%;
+    height: 200px;
+    font-size: 17px;
+}
+
+form .action{
+    margin-bottom: 32px;
+}
+
+form .action input{
+    border-radius: 4px;
+    border: 1px solid $color2;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    height: 44px;
+    letter-spacing: 3px;
+    outline: 0;
+    padding: 0 20px 0 22px;
+    margin-right: 10px;
+}
+
+form .action input[type="submit"]{
+    background: $color2;
+    color: $color1;
+}
+
+form .icons a{
+    border: 1px solid $color3;
+    border-radius: 50%;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 600;
+    width: 38px;
+    margin-right: 10px;
+}
+
+form .half .item input:focus, form .full textarea:focus, form .action input[type="reset"]:hover, form .icons a:hover{
+    background: rgb(39, 0, 0);
+}
+
+/* mediaqueries */
+
+@media (max-width: 1080px){
+    nav .right-side{
+        display: none;
+    }
+    label{
+        display: block;
+        cursor: pointer;
+    }
+    label.hamburger span{
+        display: block;
+        background: $color3;
+        height: 3px;
+        width: 28px;
+        margin: 7px;
+    }
+    label.cross span:nth-child(1){
+        display: block;
+        background: $color2;
+        width: 30px;
+        height: 4px;
+        transform-origin: 0 0;
+        transform: rotate(45deg);
+        margin-top: 0px;
+    }
+    label.cross span:nth-child(2){
+        display: block;
+        background: $color2;
+        width: 30px;
+        height: 4px;
+        transform-origin: 0 100%;
+        transform: rotate(-45deg);
+        margin-top: 17px;
+    }
+    input#open:checked ~ nav label.hamburger{
+        display: none;
+    }
+    input#close:checked ~ nav label.cross{
+        display: none;
+    }
+    input#open:checked ~ nav .right-side{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 60px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.90);
+        flex-wrap: wrap;
+    }
+    nav .right-side a{
+        margin: 20px;
+    }
+}
+
+@media only screen and (min-width:0) and (max-width:576px){
+    .navbar-collapse{
+        background-color: $color1;
+        display: flex;
+        justify-content: center !important;
+    }
+
+body{
+    background-color: $color1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@media (max-width: 480px){
+    form .half{
+        flex-direction: column;
+    }
+    form .half .item{
+        width: 100%;
+    }
+    form .action{
+        display: flex;
+        flex-direction: column;
+    }
+    form .action input{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}

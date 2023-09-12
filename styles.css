@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@400;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=REM:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+
+/* font-family: 'Lato', sans-serif;
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'PT Serif', serif;
+font-family: 'REM', sans-serif;
+font-family: 'Work Sans', sans-serif; */
+
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* navbar */
+
+nav{
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    padding: 25px 25px 25px 25px;
+}
+
+.navbar-brand img{
+    height: 60px;
+}
+
+nav .left-side a:hover{
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: white;
+    text-transform: none;
+}
+
+nav .right-side a{
+    color: red;
+    margin-left: 40px;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+
+nav .right-side a:hover{
+    letter-spacing: 1px;
+    color: white;
+    text-transform: none;
+}
+
+label{
+    display: none;
+}
+
+body > input{
+    visibility: hidden;
+    position: absolute;
+}
+
+/* jumbotron */
+
+.jumbotron{
+    height: 700px;
+    width: 100%;
+    background-image: url(img/home.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* tour */
+
+.tour{
+    background-color: rgb(16, 16, 16);
+    text-align: center;
+    padding: 100px 40px;
+}
+
+.tour h3{
+    font-size: 36px;
+    font-family: 'Work Sans', sans-serif;
+    color: red;
+    margin-bottom: 0;
+}
+
+.tour h5{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.tour p {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    text-decoration: none;
+}
+
+.button:hover{
+    color: black;
+    background-color: rgb(143, 6, 6);
+}
+
+/* newsletter */
+
+.newsletter{
+    background-color: black;
+    text-align: center;
+    padding: 100px 40px;
+}
+
+.newsletter p {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+h3{
+    font-size: 36px;
+    color: red;
+    margin-bottom: 0;
+}
+
+p{
+    padding: 0;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+.newsletter form{
+    margin: 1rem auto;
+    max-width: 60rem;
+    display: flex;
+    padding: 1rem;
+}
+
+.link-btn{
+    margin-top: 0;
+}
+
+.email{
+    width: 100%;
+    padding: 01.4rem;
+    font-size: 24px;
+}
+
+/* footer */
+
+footer{
+    background-color: rgb(16, 16, 16);
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+}
+
+footer p{
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer i{
+    color: red;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+/* top */
+
+.top{
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    color: white;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 28px;
+    box-shadow: 0 0 5px white;
+}
+
+/* mediaqueries */
+
+@media (max-width: 1080px){
+    nav .right-side{
+        display: none;
+    }
+    label{
+        display: block;
+        cursor: pointer;
+    }
+    label.hamburger span{
+        display: block;
+        background: white;
+        height: 3px;
+        width: 28px;
+        margin: 7px;
+    }
+    label.cross span:nth-child(1){
+        display: block;
+        background: red;
+        width: 30px;
+        height: 4px;
+        transform-origin: 0 0;
+        transform: rotate(45deg);
+        margin-top: 0px;
+    }
+    label.cross span:nth-child(2){
+        display: block;
+        background: red;
+        width: 30px;
+        height: 4px;
+        transform-origin: 0 100%;
+        transform: rotate(-45deg);
+        margin-top: 17px;
+    }
+    input#open:checked ~ nav label.hamburger{
+        display: none;
+    }
+    input#close:checked ~ nav label.cross{
+        display: none;
+    }
+    input#open:checked ~ nav .right-side{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 60px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.90);
+        flex-wrap: wrap;
+    }
+    nav .right-side a{
+        margin: 20px;
+    }
+}
+
+@media only screen and (min-width:0) and (max-width:576px){
+    .navbar-collapse{
+        background-color: black;
+        display: flex;
+        justify-content: center !important;
+    }
+
+@media screen and (max-width:767px)
+    {
+    .section-container
+    {
+    flex-flow:row wrap;
+    }
+    .section-container .columns.image{
+    display:block;
+    order:1;
+    width:100%;
+    height:250px;
+    }
+    .section-container .columns.content
+    {
+    display:block;
+    order:2;
+    width:100%;
+    }
+    .section-container .columns.content .content-container
+    {
+    padding:20px 35px;
+    }
+    .section-container .columns.content .content-container h5
+    {
+    margin-bottom:5px;
+    }
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+}
