@@ -1,0 +1,1 @@
+Agregué herramientas SEO y Scss, hice mejoras en la calidad de algunas imágenes, correjí errores de textos. Arreglé el menú de la versión mobile porque antes no funcionaba, y agregué las páginas que faltaban y las hice responsive.
